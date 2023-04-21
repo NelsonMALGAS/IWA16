@@ -90,9 +90,21 @@ const ddRacesSection1 = document.createElement('dd');
 
 // Selection of the first & last time for section 1
 const firstTime1 = data.response.data.NM372.races[0].time.reduce((total, current) => total + current);
-const lastTime1 = data.response.data.NM372.races[1].time.reduce((total, current) => total + current);
+const lastTime1 = (data.response.data.NM372.races[1].time.reduce((total, current) => total + current)) ;
 
-ddRacesSection1.textContent = `Last Race Date :  ${new Date(data.response.data.NM372.races[1].date).toLocaleDateString('en-GB')} , Total Time (00:${lastTime1})`;
+
+/**
+ * Changing time to hh : mm for Nwabisa
+ */
+
+const minutes1 =(data.response.data.NM372.races[1].time.reduce((total, current) => total + current)) 
+const hours =Math.floor (minutes1 / 60);
+const remainingMinutes= minutes1 % 60
+
+const formattedTime =`${hours.toString().padStart(2,'0')} : ${remainingMinutes.toString().padStart(2,0)}`
+
+
+ddRacesSection1.textContent = `Last Race Date :  ${new Date(data.response.data.NM372.races[1].date).toLocaleDateString('en-GB')} , Total Time (${formattedTime})`;
 dlSection1.appendChild(dtNameSection1);
 dlSection1.appendChild(ddNameSection1);
 dlSection1.appendChild(dtRacesSection1);
@@ -117,9 +129,21 @@ const ddRacesSection2 = document.createElement('dd');
 
 // Selection of the first & last time for section 2 
 const firstTime2 = data.response.data.SV782.races[0].time.reduce((total, current) => total + current);
-const lastTime2 = data.response.data.SV782.races[3].time.reduce((total, current) => total + current);
+const lastTime2 = (data.response.data.SV782.races[3].time.reduce((total, current) => total + current)) ;
 
-ddRacesSection2.textContent = `Last Race :  ${new Date(data.response.data.SV782.races[3].date).toLocaleDateString('en-GB')} , Total Time (00:${lastTime2})`;
+/**
+ * Changing time to hh : mm for Schalk
+ */
+
+const minutes2 =(data.response.data.SV782.races[3].time.reduce((total, current) => total + current)) 
+const hours2 =Math.floor (minutes2 / 60);
+const remainingMinutes2= minutes2 % 60
+
+const formattedTime2 =`${hours2.toString().padStart(2,'0')} : ${remainingMinutes2.toString().padStart(2,0)}`
+
+
+
+ddRacesSection2.textContent = `Last Race :  ${new Date(data.response.data.SV782.races[3].date).toLocaleDateString('en-GB')} , Total Time (${formattedTime2})`;
 dlSection2.appendChild(dtNameSection2);
 dlSection2.appendChild(ddNameSection2);
 dlSection2.appendChild(dtRacesSection2);

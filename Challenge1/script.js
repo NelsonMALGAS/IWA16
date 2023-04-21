@@ -108,7 +108,7 @@ const month=(MONTHS[new Date(data.response.data.NM372.races[1].date).getMonth()]
 const year=(new Date(data.response.data.NM372.races[1].date).getFullYear())
 
 
-ddRacesSection1.textContent = `Last Race Date :  ${day} / ${month} / ${year} , Total Time (${formattedTime})`;
+ddRacesSection1.textContent = `Event Date(Latest) :  ${day} / ${month} / ${year} , Total Time (${formattedTime})`;
 dlSection1.appendChild(dtNameSection1);
 dlSection1.appendChild(ddNameSection1);
 dlSection1.appendChild(dtRacesSection1);
@@ -151,7 +151,7 @@ const year2=(new Date(data.response.data.SV782.races[3].date).getFullYear())
 
 
 
-ddRacesSection2.textContent = `Last Race :  ${day2} / ${month2} / ${year2} , Total Time (${formattedTime2})`;
+ddRacesSection2.textContent = `Event Date(Latest) :  ${day2} / ${month2} / ${year2} , Total Time (${formattedTime2})`;
 dlSection2.appendChild(dtNameSection2);
 dlSection2.appendChild(ddNameSection2);
 dlSection2.appendChild(dtRacesSection2);

@@ -103,8 +103,12 @@ const remainingMinutes= minutes1 % 60
 
 const formattedTime =`${hours.toString().padStart(2,'0')} : ${remainingMinutes.toString().padStart(2,0)}`
 
+const day=(new Date(data.response.data.NM372.races[1].date).getDate())
+const month=(MONTHS[new Date(data.response.data.NM372.races[1].date).getMonth()])
+const year=(new Date(data.response.data.NM372.races[1].date).getFullYear())
 
-ddRacesSection1.textContent = `Last Race Date :  ${new Date(data.response.data.NM372.races[1].date).toLocaleDateString('en-GB')} , Total Time (${formattedTime})`;
+
+ddRacesSection1.textContent = `Last Race Date :  ${day} / ${month} / ${year} , Total Time (${formattedTime})`;
 dlSection1.appendChild(dtNameSection1);
 dlSection1.appendChild(ddNameSection1);
 dlSection1.appendChild(dtRacesSection1);
@@ -141,9 +145,13 @@ const remainingMinutes2= minutes2 % 60
 
 const formattedTime2 =`${hours2.toString().padStart(2,'0')} : ${remainingMinutes2.toString().padStart(2,0)}`
 
+const day2=(new Date(data.response.data.SV782.races[3].date).getDate())
+const month2=(MONTHS[new Date(data.response.data.SV782.races[3].date).getMonth()])
+const year2=(new Date(data.response.data.SV782.races[3].date).getFullYear())
 
 
-ddRacesSection2.textContent = `Last Race :  ${new Date(data.response.data.SV782.races[3].date).toLocaleDateString('en-GB')} , Total Time (${formattedTime2})`;
+
+ddRacesSection2.textContent = `Last Race :  ${day2} / ${month2} / ${year2} , Total Time (${formattedTime2})`;
 dlSection2.appendChild(dtNameSection2);
 dlSection2.appendChild(ddNameSection2);
 dlSection2.appendChild(dtRacesSection2);

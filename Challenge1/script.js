@@ -141,7 +141,7 @@ const lastTime2 = (data.response.data.SV782.races[3].time.reduce((total, current
 
 const minutes2 =(data.response.data.SV782.races[3].time.reduce((total, current) => total + current)) 
 const hours2 =Math.floor (minutes2 / 60);
-const remainingMinutes2= minutes2 % 60
+const remainingMinutes2= minutes2 % 60 // Remainder
 
 const formattedTime2 =`${hours2.toString().padStart(2,'0')} : ${remainingMinutes2.toString().padStart(2,0)}`
 

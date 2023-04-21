@@ -92,7 +92,7 @@ const ddRacesSection1 = document.createElement('dd');
 const firstTime1 = data.response.data.NM372.races[0].time.reduce((total, current) => total + current);
 const lastTime1 = data.response.data.NM372.races[1].time.reduce((total, current) => total + current);
 
-ddRacesSection1.textContent = `[First Race Date : ${new Date(data.response.data.NM372.races[0].date).toLocaleDateString()} Total Time :(00:${firstTime1})] [ Last Race Date :  ${new Date(data.response.data.NM372.races[1].date).toLocaleDateString()} Total Times :(00:${lastTime1})]`;
+ddRacesSection1.textContent = `Last Race Date :  ${new Date(data.response.data.NM372.races[1].date).toLocaleDateString('en-GB')} , Total Time (00:${lastTime1})`;
 dlSection1.appendChild(dtNameSection1);
 dlSection1.appendChild(ddNameSection1);
 dlSection1.appendChild(dtRacesSection1);
@@ -119,7 +119,7 @@ const ddRacesSection2 = document.createElement('dd');
 const firstTime2 = data.response.data.SV782.races[0].time.reduce((total, current) => total + current);
 const lastTime2 = data.response.data.SV782.races[3].time.reduce((total, current) => total + current);
 
-ddRacesSection2.textContent = `[First race : ${new Date(data.response.data.SV782.races[0].date).toLocaleDateString('en-GB')} Total Time (00:${firstTime2})] [ Last Race :  ${new Date(data.response.data.SV782.races[3].date).toLocaleDateString('en-GB')} Total Time (00:${lastTime2})]`;
+ddRacesSection2.textContent = `Last Race :  ${new Date(data.response.data.SV782.races[3].date).toLocaleDateString('en-GB')} , Total Time (00:${lastTime2})`;
 dlSection2.appendChild(dtNameSection2);
 dlSection2.appendChild(ddNameSection2);
 dlSection2.appendChild(dtRacesSection2);

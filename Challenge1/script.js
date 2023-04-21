@@ -74,6 +74,7 @@ const section2 = document.querySelector(`section[data-athlete="SV782"]`);
 const h2Section1 = document.createElement('h2');
 h2Section1.textContent = `Athlete Information , ID ${data.response.data.NM372.id}`;
 section1.appendChild(h2Section1);
+h2Section1.style.color="purple"
 
 // Create dl element for section 1
 const dlSection1 = document.createElement('dl');
@@ -118,6 +119,7 @@ dlSection1.appendChild(ddRacesSection1);
 const h2Section2 = document.createElement('h2');
 h2Section2.textContent = `Athlete Information , ID ${data.response.data.SV782.id}`;
 section2.appendChild(h2Section2);
+h2Section2.style.color="purple"
 
 // Create dl element for section 2
 const dlSection2 = document.createElement('dl');

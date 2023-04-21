@@ -67,6 +67,8 @@ const data = {
 
 // Only edit below this comment
 
+// Selection of the two sections already created
+
 const section1 = document.querySelector(`section[data-athlete="NM372"]`);
 const section2 = document.querySelector(`section[data-athlete="SV782"]`);
 
@@ -82,9 +84,9 @@ section1.appendChild(dlSection1);
 // Create dt and dd elements for section 1
 const dtNameSection1 = document.createElement('dt');
 const ddNameSection1 = document.createElement('dd');
-ddNameSection1.textContent = `Athlete Full name:${data.response.data.NM372.firstName} ${data.response.data.NM372.surname}`;
+ddNameSection1.textContent = `Athlete Full name: ${data.response.data.NM372.firstName} ${data.response.data.NM372.surname}`;
 const dtRacesSection1 = document.createElement('dt');
-dtRacesSection1.textContent = `Number of Races:${(data.response.data.NM372.races).length}`;
+dtRacesSection1.textContent = `Number of Races: ${(data.response.data.NM372.races).length}`;
 const ddRacesSection1 = document.createElement('dd');
 
 

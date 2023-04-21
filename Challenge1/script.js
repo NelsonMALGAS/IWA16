@@ -1,5 +1,3 @@
-// scripts.js
-
 const MONTHS = [
   'Jan',
   'Feb',

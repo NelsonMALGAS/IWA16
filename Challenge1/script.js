@@ -89,7 +89,12 @@ dtRacesSection1.textContent = `Number of Races: ${(data.response.data.NM372.race
 const ddRacesSection1 = document.createElement('dd');
 
 
-// Selection of the first & last time for section 1
+/**
+ * reduce() is a built-in array method that allows you to apply a function to
+   each element in an array and accumulate a single output value. It takes the
+ * values of the array and reduces them into a single value, which can be a
+ * number, string, or even an object.
+ */
 const firstTime1 = data.response.data.NM372.races[0].time.reduce((total, current) => total + current);
 const lastTime1 = (data.response.data.NM372.races[1].time.reduce((total, current) => total + current)) ;
 

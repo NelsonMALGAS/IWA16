@@ -105,7 +105,7 @@ const lastTime1 = (data.response.data.NM372.races[1].time.reduce((total, current
 
 const minutes1 =(data.response.data.NM372.races[1].time.reduce((total, current) => total + current)) 
 const hours =Math.floor (minutes1 / 60);
-const remainingMinutes= minutes1 % 60
+const remainingMinutes= minutes1 % 60 //to calculate the remaining minutes after dividing by 60
 
 const formattedTime =`${hours.toString().padStart(2,'0')} : ${remainingMinutes.toString().padStart(2,0)}`
 
